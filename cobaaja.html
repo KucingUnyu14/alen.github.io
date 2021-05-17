@@ -1,0 +1,49 @@
+>!<!DOCTYPE html>+
+<html>
+<head>
+<title></title>
+</head>
+
+<body>
+
+<h1>Coba Buka Deh</h1>
+<button type="button" id="btn">KLIK DISINI YA</button>
+
+<script src="dist/sweetalert2.all.min.js"></script>
+
+<script>
+     const
+btn=document.getElementById('btn');
+
+
+btn.addEventListener('click', function(){
+
+Swal.fire({
+title: 'Apakah kamu akan tetap bersama alen?',
+showDenyButton: true,
+showCancelButton: true,
+confirmButtonText: `Terima dong`,
+denyButtonText: `Tidak`,
+}).then((result) => {
+/* Read more about isConfirmed, isDenied below */
+if (result.isConfirmed) {
+Swal.fire('Terimakasih Cici Yaya ^_^', '', 'success')
+} else if (result.isDenied) {
+Swal.fire('yaahh,kok gitu sih •︵•', '', 'info')
+}
+})
+});
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
